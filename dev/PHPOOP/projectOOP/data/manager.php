@@ -1,33 +1,16 @@
 <?php
 
 //pewarisan
-class manager {
+class Manager {
     var string $nama;
-    var string $judul;
-
-    public function __construct (string $nama ="", string $judul = "Manager Baru") {
-        $this->nama = $nama;
-        $this->judul = $judul;
-
-}
-
-
 
     function sayHello (string $nama): void
     {
-        echo "Hy $nama, Nama saya Manajer $this->nama" .PHP_EOL;
+        echo "Hy $nama, Nama saya $this->nama" .PHP_EOL;
     }
 }
 
-class Presiden extends manager {
-    
-    public function __construct (string $nama = "") {
-    parent::__construct($nama, "Presiden");
-    }
+class Presiden extends Manager {
 
-    function sayHello (string $nama): void
-    {
-        echo "Hy $nama, Nama saya Presiden $this->nama" .PHP_EOL;
-    }
 }
 
